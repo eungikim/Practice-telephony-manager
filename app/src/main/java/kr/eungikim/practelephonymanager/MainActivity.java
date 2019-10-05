@@ -16,6 +16,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "MYTAG";
+
     private static final int BUTTON_CNT = 2;
     private static int sButtonSeq = 0;
 
@@ -45,6 +47,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             sb.append("\nContry Code").append(mTelephonyManager.getSimCountryIso());
             sb.append("\nContry Code").append(mTelephonyManager.getSimCountryIso());
             sb.append("\nContry Code").append(mTelephonyManager.getSimCountryIso());
+
+            Log.d(TAG, "음성통화 상태 : [ getCallState ] >>> "+mTelephonyManager.getCallState());
+            Log.d(TAG, "데이터통신 상태 : [ getDataState ] >>> "+mTelephonyManager.getDataState());
+            Log.d(TAG, "IMEI : [ getDeviceId ] >>>"+mTelephonyManager.getDeviceId());
+            Log.d(TAG, "전화번호 : [ getLine1Number ] >>> "+mTelephonyManager.getLine1Number());
+            Log.d(TAG, "통신사 ISO 국가코드 : [ getNetworkCountryIso ] >>> "+mTelephonyManager.getNetworkCountryIso());
+            Log.d(TAG, "통신사 ISO 국가코드 : [ getSimCountryIso ] >>> "+mTelephonyManager.getSimCountryIso());
+            Log.d(TAG, "망사업자 MCC+MNC : [ getNetworkOperator ] >>> "+mTelephonyManager.getNetworkOperator());
+            Log.d(TAG, "망사업자 MCC+MNC : [ getSimOperator ] >>> "+mTelephonyManager.getSimOperator());
+            Log.d(TAG, "망사업자명 : [ getNetworkOperatorName ] >>> "+mTelephonyManager.getNetworkOperatorName());
+            Log.d(TAG, "망사업자명 : [ getSimOperatorName ] >>> "+mTelephonyManager.getSimOperatorName());
+            Log.d(TAG, "SIM 카드 시리얼넘버 : [ getSimSerialNumber ] >>> "+mTelephonyManager.getSimSerialNumber());
+            Log.d(TAG, "SIM 카드 상태 : [ getSimState ] >>> "+mTelephonyManager.getSimState());
+            Log.d(TAG, "소프트웨어 버전넘버 : [ getDeviceSoftwareVersion ] >>> "+mTelephonyManager.getDeviceSoftwareVersion());
+
+            /*
+            휴대폰 정보 가져오기: 데이터통화 상태 : [ getDataState ] >>> 0
+            휴대폰 정보 가져오기: IMEI : [ getDeviceId ] >>>996156449799883
+            휴대폰 정보 가져오기: 전화번호 : [ getLine1Number ] >>>
+            휴대폰 정보 가져오기: 통신사 ISO 국가코드 : [ getNetworkCountryIso ] >>> kr
+            휴대폰 정보 가져오기: 통신사 ISO 국가코드 : [ getSimCountryIso ] >>> kr
+            휴대폰 정보 가져오기: 망사업자 MCC+MNC : [ getNetworkOperator ] >>> 45008
+            휴대폰 정보 가져오기: 망사업자 MCC+MNC : [ getSimOperator ] >>> 45008
+            휴대폰 정보 가져오기: 망사업자명 : [ getNetworkOperatorName ] >>> olleh
+            휴대폰 정보 가져오기: 망사업자명 : [ getSimOperatorName ] >>> olleh
+            휴대폰 정보 가져오기: SIM 카드 시리얼넘버 : [ getSimSerialNumber ] >>> 63700730264853815421
+            휴대폰 정보 가져오기: SIM 카드 상태 : [ getSimState ] >>> 5
+            휴대폰 정보 가져오기: 소프트웨어 버전넘버 : [ getDeviceSoftwareVersion ] >>> 01
+            휴대폰 정보 가져오기: Android_ID >>> 7c982859265551f2
+             */
         }
 
         return sb;
