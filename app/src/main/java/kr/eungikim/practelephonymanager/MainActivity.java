@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             sb.append("\nNetwork country iso").append(mTelephonyManager.getNetworkCountryIso());
             sb.append("\nNetwork type").append(mTelephonyManager.getNetworkType());
             sb.append("\nPhone type").append(mTelephonyManager.getPhoneType());
+            sb.append("\nContry Code").append(mTelephonyManager.getSimCountryIso());
+            sb.append("\nContry Code").append(mTelephonyManager.getSimCountryIso());
+            sb.append("\nContry Code").append(mTelephonyManager.getSimCountryIso());
         }
 
         return sb;
